@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header mainTitle="Pokélist" />
+    <List />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header.vue";
+import List from "./components/List.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    Header,
+    List
   }
-}
+};
 </script>
 
 <style>
@@ -21,8 +23,11 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+.translucide {
+  transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 </style>
